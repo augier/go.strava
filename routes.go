@@ -39,7 +39,7 @@ func (s *RouteService) Get(routeID string) *RouteGetCall {
 
 // Do does the request to the API and gets a route
 func (c *RouteGetCall) Do() (*RouteDetails, error) {
-	data, err := c.service.client.run("GET", "/route/"+c.id, nil)
+	data, err := c.service.client.run("GET", "/routes/"+c.id, nil)
 	if err != nil {
 		return nil, err
 	}
